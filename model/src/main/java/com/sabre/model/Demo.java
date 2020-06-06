@@ -1,3 +1,11 @@
+/**
+ * Authored 2020 by D. Scott Sabre (d.scott.sabre@gmail.com). All rights reserved. This software
+ * is proprietary property owned by D. Scott Sabre. This software is available for use by all
+ * (the user), whether for personal or commercial use. However if this software is reused
+ * in a manner where the contents remain wholly or "substantially" intact, the user agrees to
+ * keep this author's statement in that content. The user shall shall use this software only in
+ * accordance with these terms.
+ */
 /*
  * OpenApi Generator Demo
  * This is a sample JSON schema.
@@ -31,7 +39,7 @@ import java.util.List;
 /**
  * Demo
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-06-06T12:57:34.201-05:00[America/Chicago]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-06-06T13:42:58.149-05:00[America/Chicago]")
 public class Demo {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
