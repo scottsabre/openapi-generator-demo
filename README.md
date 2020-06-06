@@ -2,7 +2,7 @@
 
 Generate OpenApi (Swagger 2.0) Model
 
-The goal of this project is to demo how a GSON-compatible POJO model may be generated from a Swagger 2.0 JSON Schema utilizing a Maven plugin. This approach allows for creation of and updates to the model via YAML schema file without the need to manually code and re-code POJO classes. I have used the generated model in Kafka, MongoDB, and Mapstruct implementations without the need for any file modifications.  In this example, I only need the model, so I exclude API generation and allow model generation only. This project is a single maven module, however typically you would pair this module with other service-oriented modules packaged together. Note: The output model POJOs are included in this project for reference only.  Typically, you would generate the model and .gitignore them, or else package as a jar and add as a dependency to other modules. Either way, best practice is to exclude the generated model from source control and allow the build to generate the classes.
+The goal of this project is to demo how a GSON-compatible POJO model may be generated from a Swagger 2.0 JSON Schema utilizing a Maven plugin. This approach allows for creation of and updates to the model via YAML schema files without the need to manually code and maintain POJO classes. I have used the generated model in Kafka, MongoDB, and Mapstruct implementations without the need for any file modifications.  I only need the model in this example, so I exclude API generation and allow model generation only. This project is a single maven module, however typically you would pair this module with other service-oriented modules packaged together. Note: The output model POJOs are included in this project for reference only.  Typically, you would generate the model and .gitignore them, or else package as a jar and add as a dependency to other modules. Either way, best practice is to exclude the generated model from source control and allow the build to generate the classes.
 
 Required Components:
 - Swagger 2.0 model
@@ -25,7 +25,7 @@ How-to:
 	<artifactId>gson</artifactId>
     </dependency>
 ```
-- Configure your plugin.  For multiple models, create a separate <id>[unique execution name]</id> for each execution. In my case, I didn't have access to the Swagger flavor of DateTime so I forced generation with Java8.  Other configurations include excluding documentation and supporting files (for API, security, etc.)
+- Configure your plugin.  For multiple models, create a separate <id>[unique execution name]</id> for each execution. In my case, I didn't have access to the Swagger flavor of DateTime so I forced generation with Java8.  Other configurations exclude generation of model documentation and supporting files (for API, security, etc.)
 ```xml
           		<plugin>
 				<groupId>org.openapitools</groupId>
