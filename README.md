@@ -7,9 +7,10 @@ The goal of this feature is to illustrate how a GSON-compatible POJO mode may be
 Required Components:
 - Swagger 2.0 model
 - maven
-- yaml editor
+- yaml editor (Swagger editor or KaiZen plugin for Eclipse)
 
 How-to:
+- For this example, I created a Spring Boot application using Spring Initializr.  
 - Create a maven module with the source swagger file (typically src/main/resources...)
 - Add the following dependency to your maven pom file:
 ```xml
